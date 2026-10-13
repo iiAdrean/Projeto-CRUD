@@ -12,16 +12,16 @@ O sistema não apenas armazena dados, mas também gera laudos médicos automatiz
     *   Classificação da **Pressão Arterial** com sistema de bandeiras (Normal, Pré-Hipertensão, Hipertensão).
 *   **Deletar Paciente:** Remoção lógica do sistema realocando o último paciente da lista para a posição deletada, otimizando o uso dos vetores.
 *   **Alterar Dado do Paciente:** Permitir localizar um paciente pelo ID e sobrescrever suas informações de saúde(Peso, Altura e Pressão), recalculando o IMC e a classificação de presssão na próxima.
-*   **Proteção de Limites:** O sistema impede o cadastro além da capacidade máxima estipulada (10 pacientes).
+*   **Proteção de Limites:** O sistema impede o cadastro além da capacidade máxima estipulada (3 pacientes).
 
 ##  Ambiente de Desenvolvimento e Extensões
 O código foi desenvolvido e testado no **Visual Studio Code**, com o compilador GCC configurado através do pacote **MSYS2**.
 
-Para garantir a melhor experiência de desenvolvimento e execução, as seguintes extensões do VS Code foram utilizadas[cite: 5]:
-*   **C/C++ Extension Pack (Microsoft):** Suporte base para a linguagem[cite: 5].
-*   **Code Runner (Jun Han):** Responsável por executar o código de forma rápida e prática[cite: 5].
-*   **Error Lens (Alexander):** Auxilia na detecção de erros de sintaxe em tempo real[cite: 5].
-*   **Better Comments (Aaron Bond):** Para marcações estruturadas no código[cite: 5].
+Para garantir a melhor experiência de desenvolvimento e execução, as seguintes extensões do VS Code foram utilizadas:
+*   **C/C++ Extension Pack (Microsoft):** Suporte base para a linguagem.
+*   **Code Runner (Jun Han):** Responsável por executar o código de forma rápida e prática.
+*   **Error Lens (Alexander):** Auxilia na detecção de erros de sintaxe em tempo real.
+*   **Better Comments (Aaron Bond):** Para marcações estruturadas no código.
 
 **Configuração Importante:** O Code Runner foi configurado especificamente para rodar o programa no **Terminal** integrado do VS Code (opção `Run In Terminal`), e não na aba "Saída", permitindo a interação correta com a função `scanf`.
 
