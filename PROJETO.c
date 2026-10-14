@@ -7,6 +7,10 @@ int main() {
     float altura[3];
     int sistolica[3];
     int diastolica[3];
+    float glicemia[3];
+    int dia[3];
+    int mes[3];
+    int ano[3];
 
     int quantidade = 0;
     int opcao = 0;
@@ -53,6 +57,10 @@ int main() {
                     scanf("%d", &sistolica[quantidade]);
                     printf("Digite a pressao diastolica (ex: 80): \n");
                     scanf("%d", &diastolica[quantidade]);
+                    printf("Digite a data de nascimento (DD MM AAAA, com espacos): \n");
+                    scanf("%d %d %d", &dia[quantidade], &mes[quantidade], &ano[quantidade]);
+                    printf("Insira a glicemia em jejum (mg/dL): \n");
+                    scanf("%f", &glicemia[quantidade]);
 
                     quantidade++;
                     printf("\n Paciente cadastrado com sucesso!\n");
@@ -98,6 +106,41 @@ int main() {
                     else if (sistolica[i] <= 120 && diastolica[i] <= 80) {
                         printf("[\n Pressao Normal: bandeira verde]\n");
                     }
+                    int idade = 2026 - ano[i];
+                    if (mes[i] > 10 || (mes[i] == 10 && dia[i] > 14)) {
+                        idade--;
+                    }
+                printf("Idade: %d anos\n", idade);
+
+                    
+                    int classificacaoGlicemia;
+                    if (glicemia[i] < 70) {
+                        classificacaoGlicemia = 1;
+                    } else if (glicemia[i] < 100) {
+                        classificacaoGlicemia = 2;
+                    } else if (glicemia[i] < 126) {
+                        classificacaoGlicemia = 3;
+                    } else {
+                        classificacaoGlicemia = 4;
+                    }
+
+                printf("Glicemia: %.2f mg/dL -> Classificacao: ", glicemia[i]);
+                    
+                  
+                    switch (classificacaoGlicemia) {
+                        case 1:
+                            printf("Hipoglicemia.\n\n");
+                            break;
+                        case 2:
+                            printf("Glicemia Normal.\n\n");
+                            break;
+                        case 3:
+                            printf("Pre-diabetes.\n\n");
+                            break;
+                        case 4:
+                            printf("Possivel diabetes.\n\n");
+                            break;
+                    }
             }}
         }
         else if(opcao == 3){
@@ -122,6 +165,10 @@ int main() {
                     altura[pos] = altura[quantidade - 1];
                     sistolica[pos] = sistolica[quantidade - 1];
                     diastolica[pos] = diastolica[quantidade - 1];
+                    glicemia[pos] = glicemia[quantidade - 1];
+                    dia[pos] = dia[quantidade - 1];
+                    mes[pos] = mes[quantidade - 1];
+                    ano[pos] = ano[quantidade - 1];
                     
                     quantidade--;
                     printf("\n Paciente deletado com sucesso!\n");

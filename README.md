@@ -10,6 +10,8 @@ O sistema não apenas armazena dados, mas também gera laudos médicos automatiz
 *   **Buscar e Listar:** Exibe os dados dos pacientes cadastrados, incluindo:
     *   Cálculo automático do **IMC** e classificação (Baixo Peso, Peso Normal, Excesso, Obesidade, Obesidade Extrema).
     *   Classificação da **Pressão Arterial** com sistema de bandeiras (Normal, Pré-Hipertensão, Hipertensão).
+    *   Cálculo da **Idade** processado dinamicamente através da data de nascimento.
+    *   Classificação da **Glicemia** (Hipoglicemia, Glicemia Normal, Pré-diabetes, Possível diabetes).
 *   **Deletar Paciente:** Remoção lógica do sistema realocando o último paciente da lista para a posição deletada, otimizando o uso dos vetores.
 *   **Alterar Dado do Paciente:** Permitir localizar um paciente pelo ID e sobrescrever suas informações de saúde(Peso, Altura e Pressão), recalculando o IMC e a classificação de presssão na próxima.
 *   **Proteção de Limites:** O sistema impede o cadastro além da capacidade máxima estipulada (3 pacientes).
@@ -35,4 +37,4 @@ Para garantir a melhor experiência de desenvolvimento e execução, as seguinte
 4. Interaja com o menu numérico diretamente pelo terminal.
 
 ---
-*Desenvolvido por: *
+**Desenvolvido por: Adrean, Paloma e Vinicius**
